@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
 public abstract class Bullet : MonoBehaviour
@@ -11,6 +12,6 @@ public abstract class Bullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Direction * _speed * Time.deltaTime, Space.World);
+        transform.Translate(Direction * _speed * Time.deltaTime);
     }
 }
